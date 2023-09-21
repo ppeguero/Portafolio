@@ -50,7 +50,7 @@ function CondicionAtmosferica(){
 
     return (
         <>
-            <select
+            <select class="ml-[150px]"
                 id="estadoSelect"
                 onChange={(e) => setEstadoActual(e.target.value)}
                 value={estadoActual}
@@ -63,11 +63,11 @@ function CondicionAtmosferica(){
                 )
                 )}
             </select>
-            <h1>Estado del tiempo</h1>
+            <h1 class="ml-[8%]">Estado del tiempo</h1>
             {datos.map((ciudad, index) =>  {
                 if (ciudad.state === estadoActual){
                     return (
-                        <div key={index}>
+                        <div key={index} class="ml-[8%]">
                             <p>{ciudad.name} - <i>{ciudad.skydescriptionlong}</i></p>
                         </div>
                     );
