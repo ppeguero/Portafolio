@@ -1,10 +1,11 @@
 import CondicionAtmosferica from "./components/CondicionAtmosfericas";
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <CondicionAtmosferica />
-    </div>
+    </>
   );
 }
 
