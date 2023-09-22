@@ -53,12 +53,12 @@ function CondicionAtmosferica(){
             <div className="backdrop-blur-lg bg-black/10 w-full flex justify-center">
                 <div className="flex gap-10 items-center">
                     <div className="flex flex-col items-center">
-                        <h1 className="text-5xl font-bold">Estado del tiempo</h1>
+                        <h1 className="text-2xl font-bold">Estado del tiempo</h1>
                         <select
                             id="estadoSelect"
                             onChange={(e) => setEstadoActual(e.target.value)}
                             value={estadoActual}
-                            className='p-4 text-4xl font-bold my-10 rounded-xl text-center shadow-[0px_0px_30px_#222] bg-transparent'>
+                            className='p-4 text-xl font-bold my-10 rounded-xl text-center shadow-[0px_0px_30px_#222] bg-transparent cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
                             <option value="estadoSelect">Selecciona una opcion</option>
                             {estadosMx.map((opcion) => (
                                 <option key={opcion.id} value={opcion.name}>
@@ -73,7 +73,7 @@ function CondicionAtmosferica(){
                             {datos.map((ciudad, index) =>  {
                                 if (ciudad.state === estadoActual){
                                     return (
-                                        <div className='flex flex-col text-2xl m-2 p-2 text-white shadow-[0px_5px_5px_#222] bg-transparent rounded-xl' key={index}>
+                                        <div className='flex flex-col text-xl m-2 p-2 text-white shadow-[0px_5px_5px_#222] bg-transparent rounded-xl' key={index}>
                                             <p>{ciudad.name} - <i>{ciudad.skydescriptionlong}</i></p>
                                         </div>
                                     );
