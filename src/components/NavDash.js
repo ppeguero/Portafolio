@@ -1,6 +1,6 @@
 import React from "react";
 
-const Sidebar = () => {
+function NavDash() {
     return (
         <>
             <div class="bg-[#212121] border-r border-[#e5e5e5] fixed top-0 bottom-0 h-full w-[160px]">
@@ -37,4 +37,4 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar;
+export default NavDash;
