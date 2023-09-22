@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function CondicionAtmosferica(){
-    const url = "https://api.datos.gob.mx/v1/condiciones-atmosfericas";
+    const url = `https://api.datos.gob.mx/v1/condiciones-atmosfericas?pageSize=5000`;
     const estadosMx = [
         { "id": 1, "name": "Aguascalientes" },
         { "id": 2, "name": "Baja California" },
@@ -16,28 +16,30 @@ function CondicionAtmosferica(){
         { "id": 11, "name": "Guerrero" },
         { "id": 12, "name": "Hidalgo" },
         { "id": 13, "name": "Jalisco" },
-        { "id": 14, "name": "Estado de México" },
-        { "id": 15, "name": "Michoacán" },
+        { "id": 14, "name": "Estado de Mexico" },
+        { "id": 15, "name": "Michoacan" },
         { "id": 16, "name": "Morelos" },
         { "id": 17, "name": "Nayarit" },
-        { "id": 18, "name": "Nuevo León" },
+        { "id": 18, "name": "Nuevo Leon" },
         { "id": 19, "name": "Oaxaca" },
         { "id": 20, "name": "Puebla" },
-        { "id": 21, "name": "Querétaro" },
+        { "id": 21, "name": "Queretaro" },
         { "id": 22, "name": "Quintana Roo" },
-        { "id": 23, "name": "San Luis Potosí" },
+        { "id": 23, "name": "San Luis Potosi" },
         { "id": 24, "name": "Sinaloa" },
         { "id": 25, "name": "Sonora" },
         { "id": 26, "name": "Tabasco" },
         { "id": 27, "name": "Tamaulipas" },
         { "id": 28, "name": "Tlaxcala" },
         { "id": 29, "name": "Veracruz" },
-        { "id": 30, "name": "Yucatán" },
+        { "id": 30, "name": "Yucatan" },
         { "id": 31, "name": "Zacatecas" },
     ]
     const [datos, setDatos] = useState([])
     const [estadoActual, setEstadoActual] = useState([])
     
+
+
     const consultarDatos = () => {
         return fetch(url)
             .then((res) => res.json())
