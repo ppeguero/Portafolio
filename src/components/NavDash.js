@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { TiWeatherCloudy } from "react-icons/ti";
 import { FiLoader } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function NavDash() {
     const [open, setOpen] = useState(true);
@@ -17,14 +18,14 @@ function NavDash() {
                     <li className="text-gray-300 flex items-center gap-x-4 p-2 hover:bg-light-white 
                     rounded-md mt-2 cursor-pointer">
                         <span className="text-3xl block float-left"><TiWeatherCloudy/></span>
-                        <span className={`text-base font-medium flex-1 ${!open && "hidden"}`}>Atmosferica</span>
+                        <Link to={`/`} className={`text-base font-medium flex-1 ${!open && "hidden"}`}>Atmosferica</Link>
                     </li>
                 </ul>
                 <ul class="m-5">
                     <li className="text-gray-300 flex items-center gap-x-4 p-2 hover:bg-light-white 
                     rounded-md mt-2 cursor-pointer">
                         <span className="text-3xl block float-left"><FiLoader/></span>
-                        <span className={`text-base font-medium flex-1 ${!open && "hidden"}`}>NuevoTema</span>
+                        <Link to={'/prueba'} className={`text-base font-medium flex-1 ${!open && "hidden"}`}>NuevoTema</Link>
                     </li>
                 </ul>
                 <ul class="m-5">

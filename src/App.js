@@ -1,13 +1,30 @@
 import CondicionAtmosferica from "./components/CondicionAtmosfericas";
-import NavDash from "./components/NavDash";
 import './index.css';
+
+import { useRoutes, BrowserRouter as Router } from "react-router-dom";
+
+// router 
+const AppRouter = () => {
+  let routes = useRoutes([
+    { path: '/', element: <CondicionAtmosferica/> }
+  ]);
+
+  return routes;
+}
+
+function AppContent(){
+  return(
+    <div>
+      <AppRouter />
+    </div>
+  )
+}
 
 function App() {
   return (
-    <>
-      <CondicionAtmosferica />
-      <NavDash />
-    </>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
