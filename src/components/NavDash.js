@@ -25,14 +25,14 @@ function NavDash() {
                     <li className="text-gray-300 flex items-center gap-x-4 p-2 hover:bg-light-white 
                     rounded-md mt-2 cursor-pointer">
                         <span className="text-3xl block float-left"><FiLoader/></span>
-                        <Link to={'/prueba'} className={`text-base font-medium flex-1 ${!open && "hidden"}`}>NuevoTema</Link>
+                        <Link to={'/formulario'} className={`text-base font-medium flex-1 ${!open && "hidden"}`}>NuevoTema</Link>
                     </li>
                 </ul>
                 <ul class="m-5">
                     <li className="text-gray-300 flex items-center gap-x-4 p-2 hover:bg-light-white 
                     rounded-md mt-2 cursor-pointer">
                         <span className="text-3xl block float-left"><FiLoader/></span>
-                        <span className={`text-base font-medium flex-1 ${!open && "hidden"}`}>NuevoTema</span>
+                        <Link to={'/acceso'} className={`text-base font-medium flex-1 ${!open && "hidden"}`}>NuevoTema</Link>
                     </li>
                 </ul>
                 <ul class="m-5">
